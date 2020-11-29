@@ -1,23 +1,23 @@
-
+<!DOCTYPE html>
 <html>
-    <body>
-<div>Teachable Machine Image Model</div>
-<button type="button" onclick="init()">Start</button>
-<div id="webcam-container"></div>
-<div id="label-container"></div>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-<script type="text/javascript">
-    // More API functions here:
-    // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+  <body>
+    <div class="Heading">Asher's MASK Checker</div>
+    <button type="button" onclick="init()" class="start">Start</button>
+    <div id="webcam-container"></div>
+    <div id="label-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+      // More API functions here:
+      // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
-    // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/o1aA8fwgb/";
+      // the link to your model provided by Teachable Machine export panel
+      const URL = "https://teachablemachine.withgoogle.com/models/MyPfAr0QK/";
 
-    let model, webcam, labelContainer, maxPredictions;
+      let model, webcam, labelContainer, maxPredictions;
 
-    // Load the image model and setup the webcam
-    async function init() {
+      // Load the image model and setup the webcam
+      async function init() {
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
 
@@ -27,6 +27,7 @@
         // Note: the pose library adds "tmImage" object to your window (window.tmImage)
         model = await tmImage.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
+        console.log(maxPredictions);
 
         // Convenience function to setup a webcam
         const flip = true; // whether to flip the webcam
@@ -38,27 +39,51 @@
         // append elements to the DOM
         document.getElementById("webcam-container").appendChild(webcam.canvas);
         labelContainer = document.getElementById("label-container");
-        for (let i = 0; i < maxPredictions; i++) { // and class labels
-            labelContainer.appendChild(document.createElement("div"));
+        for (let i = 0; i < maxPredictions; i++) {
+          // and class labels
+          labelContainer.appendChild(document.createElement("div"));
         }
-    }
+      }
 
-    async function loop() {
+      async function loop() {
         webcam.update(); // update the webcam frame
         await predict();
         window.requestAnimationFrame(loop);
-    }
+      }
 
-    // run the webcam image through the image model
-    async function predict() {
+      // run the webcam image through the image model
+      async function predict() {
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
         for (let i = 0; i < maxPredictions; i++) {
-            const classPrediction =
-                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-            labelContainer.childNodes[i].innerHTML = classPrediction;
+          const classPrediction =
+            prediction[i].className +
+            ": " +
+            prediction[i].probability.toFixed(2);
+          if (
+            prediction[0].probability.toFixed(2) >
+            prediction[1].probability.toFixed(2)
+          ) {
+            labelContainer.childNodes[0].innerHTML = "GOOD BOY";
+          } else {
+            labelContainer.childNodes[0].innerHTML = "MASK VEKKADA MONE";
+          }
+          // labelContainer.childNodes[i].innerHTML = classPrediction;
         }
-    }
-</script>
-    </body>
+      }
+    </script>
+    <style>
+      body {
+        background-image: url("https://bit.ly/3lhHh0G");
+      }
+      .Heading {
+        font-size: 100px;
+        text-emphasis-color: blue;
+      }
+
+      .start {
+        font-size: 100px;
+      }
+    </style>
+  </body>
 </html>
