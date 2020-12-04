@@ -1,94 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <div class="Heading">Asher's MASK Checker</div>
-    <button type="button" onclick="init()" class="start">Start</button>
-    <div id="webcam-container"></div>
-    <div id="label-container" class="message"></div>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-    <script type="text/javascript">
-      // More API functions here:
-      // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+<head>
+<h1 style="color:rgb(31, 16, 243);font-family:verdana;">freesoftwareforall</h1>
 
-      // the link to your model provided by Teachable Machine export panel
-      const URL = "https://teachablemachine.withgoogle.com/models/MyPfAr0QK/";
-
-      let model, webcam, labelContainer, maxPredictions;
-
-      // Load the image model and setup the webcam
-      async function init() {
-        const modelURL = URL + "model.json";
-        const metadataURL = URL + "metadata.json";
-
-        // load the model and metadata
-        // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
-        // or files from your local hard drive
-        // Note: the pose library adds "tmImage" object to your window (window.tmImage)
-        model = await tmImage.load(modelURL, metadataURL);
-        maxPredictions = model.getTotalClasses();
-        console.log(maxPredictions);
-
-        // Convenience function to setup a webcam
-        const flip = true; // whether to flip the webcam
-        webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
-        await webcam.setup(); // request access to the webcam
-        await webcam.play();
-        window.requestAnimationFrame(loop);
-
-        // append elements to the DOM
-        document.getElementById("webcam-container").appendChild(webcam.canvas);
-        labelContainer = document.getElementById("label-container");
-        for (let i = 0; i < maxPredictions; i++) {
-          // and class labels
-          labelContainer.appendChild(document.createElement("div"));
-        }
-      }
-
-      async function loop() {
-        webcam.update(); // update the webcam frame
-        await predict();
-        window.requestAnimationFrame(loop);
-      }
-
-      // run the webcam image through the image model
-      async function predict() {
-        // predict can take in an image, video or canvas html element
-        const prediction = await model.predict(webcam.canvas);
-        for (let i = 0; i < maxPredictions; i++) {
-          const classPrediction =
-            prediction[i].className +
-            ": " +
-            prediction[i].probability.toFixed(2);
-          if (
-            prediction[0].probability.toFixed(2) >
-            prediction[1].probability.toFixed(2)
-          ) {
-            labelContainer.childNodes[0].innerHTML = "GOOD BOY";
-          } else {
-            labelContainer.childNodes[0].innerHTML = "MASK VEKKADA MONE";
-          }
-          // labelContainer.childNodes[i].innerHTML = classPrediction;
-        }
-      }
-    </script>
-    <style>
-      body {
-        background-image: url("https://bit.ly/2Jis6Ht");
-      }
-      .Heading {
-        font-size: 100px;
-        text-emphasis-color: blue;
-      }
-
-      .start {
-        font-size: 100px;
-      }
-      .message {
-        font-size: 100px;
-        font-family: cursive;
-        background-color: aqua;
-      }
+<link rel="stylesheet" href="style.css" />
+		
+      
     </style>
-  </body>
+</head>
+
+<body>
+	<p style="color:rgb(17, 21, 236);font-family: cursive;">This Site if for people Who don't like paying for their software license</p>
+<p>                           </p>
+<p style="color:rgb(31, 16, 235);font-family: cursive;">All the Software in this site are harmless </p>
+<p style="color:rgb(17, 58, 240);font-family: cursive;">If you have any suggetions for adding any softwares you can mail the <br>suggetions at techazz123@gmail.com and I will try To include that software</p>
+<div style="background-color: aqua;"> Enter the Software you Want</div>
+<input class="searchinput"></input>
+<button class="search">Search</button>
+
+<div class="nomessage"></div>
+
+
+
+<h3 style="color:red;">Video Editing Softwares</h3>
+<a class="software" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiGpvj0i6DsAhWQXSsKHSWeBfAQFjAAegQIAxAC&url=http%3A%2F%2Fsamadjee.com%2Fadobe%2F2018%2F&usg=AOvVaw2BbxuuLpBgEitRpIOkXnd0">Premier PRO</a><br>
+<a class="software" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwih2oagjKDsAhVVSX0KHRnVBNcQFjAAegQIAhAC&url=https%3A%2F%2Fprogrammes.leliene.eu%2FSony%2520Vegas%2520Pro%252013%2520Build%2520453%2520(64%2520bit)%2F&usg=AOvVaw1Z3X93Mc58aoy4f9xoSHmh">Sony Vegas PRO</a><br>
+<a class="software" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi9uKr0jKDsAhVNdCsKHT8ZA9oQFjAAegQIAxAC&url=http%3A%2F%2Fnorb.rulez.org%2F~djnyn%2FEgyebek%2FVideo%2FCyberLink%2520powerdirector%25209.00.2330%2F&usg=AOvVaw3oocov2KZa0LQOsXFBj8L2">Cyberlink PowerDirector</a><br>
+<a class="software" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwikkNSZjaDsAhUYeisKHYgdCZgQFjAAegQIARAC&url=https%3A%2F%2Fprogrammes.leliene.eu%2FWondershare%2520Filmora%25208.5.2.1%2520(x64)%2520%2B%2520Crack%2F&usg=AOvVaw0S62kiGAFnoTvZ11XQKQIk">WonderShare Filmora</a><br>
+<a class="software" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj17p_ejqDsAhWk9nMBHQk6CPcQFjAAegQIBBAC&url=https%3A%2F%2Fusers.wfu.edu%2Fyipcw%2Fatg%2Fcorel%2Fvideostudio%2F&usg=AOvVaw0_SSTYIED6hFbbqUQgSpdI">Corel VideoStudio</a><br>
+<a class="software" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjr456Pj6DsAhWwgUsFHcAIASoQFjAAegQIARAC&url=https%3A%2F%2Fprogrammes.leliene.eu%2FCorel%2520Pinnacle%2520Studio%2520v18.0.1.10212%2520Ultimate%2520Multilingual%2FCONT%2F&usg=AOvVaw2aD-1WETLObz_uDkk4vEBP">Pinnacle Studio</a>
+
+<p style="color:white;">Email your suggestion to <a href="https://mail.google.com/mail/u/0/">techazz123@gmail.com</a></p> 
+
+	<iframe frameborder="0" src="https://itch.io/embed/813014?linkback=true" width="552" height="167"><a href="https://asherms.itch.io/galaxy-wanderers">Galaxy-Wanderers by Asherms</a></iframe>
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
 </html>
