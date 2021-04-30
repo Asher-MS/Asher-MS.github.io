@@ -3,51 +3,54 @@
 let cprog=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">PROGRAMMING IN C
 [Theory]</span></a>
 
-<div class="font-size13 text-light-gray">SHABANA A.S.</div>`;
+
+<div class="font-size13 text-light-gray">SHABANA A.S.</div>
+<button id="info-button">INFO</button>`;
 
 let physics=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank">
 <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">PHYSICS</span></a>
                                 
-                                <div class="font-size13 text-light-gray">DR. SREENADH S</div>`;
+                                <div class="font-size13 text-light-gray">DR. SREENADH S</div>
+                                <button id="info-button">INFO</button>`;
 
 let graphics=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">GRAPHICS</span></a>
                                 
-<div class="font-size13 text-light-gray">RIZWAN RASHEED</div>`;
+<div class="font-size13 text-light-gray">RIZWAN RASHEED</div><button id="info-button">INFO</button>`;
 let beee1=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">BEEE</span></a>
                                 
-<div class="font-size13 text-light-gray">SAJEENA A</div>`;
+<div class="font-size13 text-light-gray">SAJEENA A</div><button id="info-button">INFO</button>`;
 
 let beee2=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">BEEE</span></a>
                                 
-<div class="font-size13 text-light-gray">MOHAMMED MANSOOR O</div>`;
+<div class="font-size13 text-light-gray">MOHAMMED MANSOOR O</div><button id="info-button">INFO</button>`;
 
 let maths=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">MATHS</span></a>
                                 
-<div class="font-size13 text-light-gray">FAYIS THAZHETHE PALLIYALI</div>`;
+<div class="font-size13 text-light-gray">FAYIS THAZHETHE PALLIYALI</div><button id="info-button">INFO</button>`;
 
 let procomm=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">PROFESSIONAL COMMUNICATION</span></a>
                                 
-<div class="font-size13 text-light-gray">AMINA N.M.</div>`;
+<div class="font-size13 text-light-gray">AMINA N.M.</div><button id="info-button">INFO</button>`;
 
 
 let complab=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">PROGRAMMING IN C LAB</span></a>
                                 
-<div class="font-size13 text-light-gray">SHABANA A.S.</div>`;
+<div class="font-size13 text-light-gray">SHABANA A.S.</div><button id="info-button">INFO</button>`;
 
 
 
 let phylab=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">PHYSICS LAB/COMP LAB</span></a>
                                 
-<div class="font-size13 text-light-gray">DR. SREENADH S</div>`;
+<div class="font-size13 text-light-gray">DR. SREENADH S</div><button id="info-button">INFO</button>`;
 
 
 let free=`<a href="./free.html"><span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">!!FREE!!!</span></a>
                                 
-<div class="font-size13 text-light-gray">YOURSELF</div>`
+<div class="font-size13 text-light-gray">YOURSELF</div><button id="info-button">INFO</button>`
 
 let eeelab=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">EEE WRKSHP</span></a>
                                 
-<div class="font-size13 text-light-gray"></div>`
+<div class="font-size13 text-light-gray"></div><button id="info-button">INFO</button>`;
 
 let periods={
     "m1":cprog,
@@ -91,3 +94,4 @@ let periods={
 for(let per in periods){
     document.getElementById(per).innerHTML=periods[per];
 }
+
