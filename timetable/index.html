@@ -121,6 +121,23 @@
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
+.glow {
+  font-size: 80px;
+  font-family: 'New Tegomin', serif;
+  color: black;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
     </style>
 </head>
 <body>
@@ -128,7 +145,7 @@
                 <div class="timetable-img text-center">
                    
                 </div>
-                <div style="font-size:50px; font-family: 'Lucida Console', 'Courier New', monospace;text-align: center;">        TIMETABLE CSE-A</div>
+                <h1 class="glow">TimeTable CS-R2A</h1>
                 <div style="text-align: center;"><img src="https://media.giphy.com/media/SskuIplhMKmaifpXm3/giphy.gif" width="300px" height="100px"></div>
                 <div class="table-responsive">
                     <table class="table table-bordered text-center">
