@@ -5,28 +5,28 @@ let cprog=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span 
 
 
 <div class="font-size13 text-light-gray">SHABANA A.S.</div>
-<a href="./prog_c_info.html"><button id="info-button">INFO</button>`;
+<a href="prog_c_info.html"><button id="info-button">INFO</button>`;
 
 let physics=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank">
 <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">PHYSICS</span></a>
                                 
                                 <div class="font-size13 text-light-gray">DR. SREENADH S</div>
-                                <a href="./physics.html"><button id="info-button">INFO</button>`;
+                                <a href="physics.html"><button id="info-button">INFO</button>`;
 
 let graphics=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">GRAPHICS</span></a>
                                 
-<div class="font-size13 text-light-gray">RIZWAN RASHEED</div><a href="./graphics.html"><button id="info-button">INFO</button>`;
+<div class="font-size13 text-light-gray">RIZWAN RASHEED</div><a href="graphics.html"><button id="info-button">INFO</button>`;
 let beee1=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">BEEE</span></a>
                                 
-<div class="font-size13 text-light-gray">SAJEENA A</div><a href="./beee.html"><button id="info-button">INFO</button>`;
+<div class="font-size13 text-light-gray">SAJEENA A</div><a href="beee.html"><button id="info-button">INFO</button>`;
 
 let beee2=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">BEEE</span></a>
                                 
-<div class="font-size13 text-light-gray">MOHAMMED MANSOOR O</div><a href="./beee.html"><button id="info-button">INFO</button>`;
+<div class="font-size13 text-light-gray">MOHAMMED MANSOOR O</div><a href="beee.html"><button id="info-button">INFO</button>`;
 
 let maths=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">MATHS</span></a>
                                 
-<div class="font-size13 text-light-gray">FAYIS THAZHETHE PALLIYALI</div><a href="./math.html"><button id="info-button">INFO</button>`;
+<div class="font-size13 text-light-gray">FAYIS THAZHETHE PALLIYALI</div><a href="math.html"><button id="info-button">INFO</button>`;
 
 let procomm=`<a href="https://meet.google.com/nex-afii-xcc" target="_blank"><span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">PROFESSIONAL COMMUNICATION</span></a>
                                 
